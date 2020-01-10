@@ -51,6 +51,8 @@ declare class PptxGenJS {
 	subject: string
 	title: string
 
+	shapes: {[key: string]: PptxGenJS.IShape}
+
 	// Methods
 
 	/**
@@ -65,7 +67,7 @@ declare class PptxGenJS {
      * @see https://support.office.com/en-us/article/Change-the-size-of-your-slides-040a811c-be43-40b9-8d04-0de5ed79987e
      * @param {IUserLayout} layout - an object with user-defined w/h
      */
-    defineLayout(layout: PptxGenJS.IUserLayout): void;
+  defineLayout(layout: PptxGenJS.IUserLayout): void;
 	/**
 	 * Adds a new slide master [layout] to the Presentation
 	 * @param {ISlideMasterOptions} slideMasterOpts - layout definition
